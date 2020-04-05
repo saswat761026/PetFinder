@@ -1,17 +1,18 @@
 import React from 'react';
-import './App.css';
+import './style/App.scss';
 import Routes from "./routes";
-import { ErrorBoundary } from "./component/index";
+import { ErrorBoundary, Layout } from "./component/index";
 
 const App = (props)=> {
 
   return (
     <ErrorBoundary>
-    <div className="App">
-    <h1>Flight Management System</h1>
-    <Routes/>
-   </div>
-   </ErrorBoundary>
+      <div className="App">
+        <Layout>
+          <Routes />
+        </Layout>
+      </div>
+    </ErrorBoundary>
   );
 }
 
