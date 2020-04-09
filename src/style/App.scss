@@ -1,7 +1,13 @@
 @import "~bootstrap/scss/bootstrap";
 
 .App {
-    text-align: center;
-    background-color: rgb(174, 0, 255);
-  }
+  display: flexbox;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+
+.mainContainer{
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
   

@@ -8,9 +8,13 @@ const App = (props)=> {
   return (
     <ErrorBoundary>
       <div className="App">
+      <div className="container">
         <Layout>
-          <Routes />
+        <div className="mainContainer">
+          <Routes/>
+        </div>  
         </Layout>
+        </div>
       </div>
     </ErrorBoundary>
   );
