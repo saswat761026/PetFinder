@@ -1,56 +1,55 @@
 import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-import {Login} from './component/index';
+import { Login, Home } from "./component/index";
 
 const pageRoutes = [
-//   {
-//     path: "/home",
-//     component: Component,
-//     additionalProps: {},
-//   },
+  {
+    path: "/",
+    component: Home,
+    additionalProps: {},
+  },
 ];
 
 const defaultRoutes = [
-    {
-        path: "/",
-        component: Login,
-        additionalProps: {},
-      },
-      {
-        path: "/login",
-        component: Login,
-        additionalProps: {},
-      },
-    //   {
-    //     path: "/createAccount",
-    //     component: Component,
-    //     additionalProps: {},
-    //   },  
-]
+  {
+    path: "/",
+    component: Login,
+    additionalProps: {},
+  },
+  {
+    path: "/login",
+    component: Login,
+    additionalProps: {},
+  },
+  //   {
+  //     path: "/createAccount",
+  //     component: Component,
+  //     additionalProps: {},
+  //   },
+];
 
 const errorRoutes = [
-//     {
-//         path: "/error",
-//         component: Component,
-//         additionalProps: {},
-//       },
-    {
-        path: "*",
-        component: Login,
-        additionalProps: {},
-    }
- ]
-
-const isLoggedIn = true;
-
-const routes = isLoggedIn?[...defaultRoutes,...pageRoutes, ...errorRoutes]:[...defaultRoutes, ...errorRoutes]
+  //     {
+  //         path: "/error",
+  //         component: Component,
+  //         additionalProps: {},
+  //       },
+  {
+    path: "*",
+    component: Login,
+    additionalProps: {},
+  },
+];
 
 const Routes = (props) => {
+  let routes = props.isLoggedIn
+    ? [...pageRoutes, ...defaultRoutes, ...errorRoutes]
+    : [...defaultRoutes, ...errorRoutes];
+
   return (
-      <Switch>
+    <Switch>
       {routes.map((route, index) => {
-        return (
-          (route.path!=="*") ? 
+        return route.path !== "*" ? (
           <Route
             exact={true}
             key={index}
@@ -61,15 +60,13 @@ const Routes = (props) => {
                 {...props}
               />
             )}
-          />:
-          <Redirect
-              key={index}
-              from="**"
-              to="/"
           />
+        ) : (
+          <Redirect key={index} from="**" to="/" />
         );
       })}
-    </Switch>)
+    </Switch>
+  );
 };
 
 export default Routes;

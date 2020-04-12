@@ -1,8 +1,8 @@
-import {ATTEMPT_USER_LOGIN} from './../../shared/actionType'
+import { ATTEMPT_USER_LOGIN } from "./../../shared/actionType";
 
-export const loginAction = (email, password) =>{
-   return{
-       type:ATTEMPT_USER_LOGIN,
-       payload:{email:email}
-   }
-}
+export const loginAction = (email, password) => {
+  return {
+    type: ATTEMPT_USER_LOGIN,
+    payload: { email: email, password: password }
+  };
+};
