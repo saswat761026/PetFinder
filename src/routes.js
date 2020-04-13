@@ -1,13 +1,13 @@
 import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-import { Login, Home } from "./component/index";
+import { Login, Home, SignUp } from "./component/index";
 
 const pageRoutes = [
   {
     path: "/",
     component: Home,
     additionalProps: {},
-  },
+  }
 ];
 
 const defaultRoutes = [
@@ -17,23 +17,18 @@ const defaultRoutes = [
     additionalProps: {},
   },
   {
-    path: "/login",
-    component: Login,
+    path: "/signup",
+    component: SignUp,
     additionalProps: {},
-  },
-  //   {
-  //     path: "/createAccount",
-  //     component: Component,
-  //     additionalProps: {},
-  //   },
+  }
 ];
 
 const errorRoutes = [
-  //     {
-  //         path: "/error",
-  //         component: Component,
-  //         additionalProps: {},
-  //       },
+  // {
+  //   path: "/error",
+  //   component: Component,
+  //   additionalProps: {},
+  // },
   {
     path: "*",
     component: Login,
@@ -43,7 +38,7 @@ const errorRoutes = [
 
 const Routes = (props) => {
   let routes = props.isLoggedIn
-    ? [...pageRoutes, ...defaultRoutes, ...errorRoutes]
+    ? [...pageRoutes, ...errorRoutes]
     : [...defaultRoutes, ...errorRoutes];
 
   return (

@@ -38,6 +38,10 @@ const Login = (props) => {
     dispatchLogin(email, password);
   };
 
+  const redirectToSignUpPage = () =>{
+    props.history.push("/signup")
+  }
+
   return (
     <div>
       <h4>Login</h4>
@@ -78,6 +82,7 @@ const Login = (props) => {
           Submit
         </Button>
       </Form>
+      <Button color="link" onClick={redirectToSignUpPage}>Don't have account? Sign Up here.</Button> 
     </div>
   );
 };
