@@ -1,4 +1,4 @@
-import { ATTEMPT_USER_LOGIN } from "./../../shared/actionType";
+import { ATTEMPT_USER_LOGIN, ATTEMPT_CREATE_USER } from "./../../shared/actionType";
 
 export const loginAction = (email, password) => {
   return {
@@ -6,3 +6,10 @@ export const loginAction = (email, password) => {
     payload: { email: email, password: password }
   };
 };
+
+export const signUpAction = (formDetails) =>{
+  return {
+    type: ATTEMPT_CREATE_USER,
+    payload:formDetails
+  }
+} 

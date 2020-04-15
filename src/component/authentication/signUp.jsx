@@ -1,20 +1,37 @@
 import React, { useState, useCallback } from "react";
+import { useDispatch } from "react-redux";
 import { Button, Form, FormGroup, Label, Input, Row, Col } from "reactstrap";
+import { signup } from "./../../redux/actions/indexAction";
 
 const SignUp = (props) => {
   const [formDetails, setFormDetails] = useState({});
 
+  const dispatch = useDispatch();
+
+  const dispatchSignUp = useCallback(
+    (formDetails) => dispatch(signup(formDetails)),
+    [dispatch]
+  );
+
   const onChangeFormDetails = (event) => {
-    const propertyName = event.target.name 
-    const newFormDetails = Object.assign({},formDetails)
-    newFormDetails[propertyName] = event.target.value
-    setFormDetails(newFormDetails)
+    const propertyName = event.target.name;
+    const newFormDetails = Object.assign({}, formDetails);
+    newFormDetails[propertyName] = event.target.value;
+    setFormDetails(newFormDetails);
   };
 
+  const validatePassword = (password, confirmpassword) => {
+    return password === confirmpassword;
+  };
 
-  const onSubmit = (event) =>{
-    event.preventDefult(); 
-  }
+  const onSubmit = (event) => {
+    event.preventDefault();
+    const isSameAsPassword = validatePassword(
+      formDetails.password,
+      formDetails.confirmpassword
+    );
+    isSameAsPassword && dispatchSignUp(formDetails);
+  };
 
   return (
     <Form>
@@ -60,30 +77,21 @@ const SignUp = (props) => {
           }}
         />
       </FormGroup>
-      <FormGroup tag="fieldset">
+      <FormGroup
+        tag="fieldset"
+        onChange={(event) => {
+          onChangeFormDetails(event);
+        }}
+      >
         <legend>Gender</legend>
         <FormGroup check>
           <Label check>
-            <Input
-              type="radio"
-              name="male"
-              onChange={(event) => {
-                onChangeFormDetails(event);
-              }}
-            />{" "}
-            Male
+            <Input type="radio" name="gender" value="male" /> Male
           </Label>
         </FormGroup>
         <FormGroup check>
           <Label check>
-            <Input
-              type="radio"
-              name="female"
-              onChange={(event) => {
-                onChangeFormDetails(event);
-              }}
-            />{" "}
-            Female
+            <Input type="radio" name="gender" value="female" /> Female
           </Label>
         </FormGroup>
       </FormGroup>
@@ -123,7 +131,13 @@ const SignUp = (props) => {
           }}
         />
       </FormGroup>
-      <Button onClick={(event)=>{onSubmit(event)}}>Submit</Button>
+      <Button
+        onClick={(event) => {
+          onSubmit(event);
+        }}
+      >
+        Submit
+      </Button>
     </Form>
   );
 };

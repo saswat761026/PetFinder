@@ -4,6 +4,7 @@ import {
   ATTEMPT_USER_LOGIN,
   ATTEMPT_USER_LOGOUT,
   USER_LOGOUT_SUCCEEDED,
+  ATTEMPT_CREATE_USER,
 } from "./../../shared/actionType";
 import { auth } from "./../../firebase/firebaseConfig";
 
@@ -41,4 +42,12 @@ function* logoutAsync() {
 
 export function* logoutWatcher() {
   yield takeEvery(ATTEMPT_USER_LOGOUT, logoutAsync);
+}
+
+function* signUpAsync(action){
+   yield console.log("signup:", action)
+}
+
+export function* signUpWatcher(){
+  yield takeEvery(ATTEMPT_CREATE_USER,signUpAsync)
 }
