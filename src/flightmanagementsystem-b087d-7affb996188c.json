@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "flightmanagementsystem-b087d",
+  "private_key_id": "7affb996188c785339fd3ce2019813df308cc62d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDihZIKKDD0BiIM\nrhfW5uc8PXnEdD1JK1PZZCUBPAmOprho+lAg+XOQahv/nWk2SEyfdRV1B/ubMUqs\nCabJGq/RFzLUwiVsCIbBOCm+YjtYaMA/ds8itQbCdUEMkBbWBarvnNqZQScLzPd7\n8rXxBO9Ru4hsdrwtAtTjZymu98c4REe5sLr1in+jXRguPGhWOrv3NTjssG3iCAnu\nO4gMdg6qK/roH1dkaP5QDHY6Vgp9RTFIyJTaxPhXNb1EHkjJnD/OZeHq34gzK6cI\nICpC6Xezsk845MLBp2dM0gfvjnfUHZZCSpJRxfqPGA+sxWLS5+WFCcBeOZAXzXT0\nFaHSBvanAgMBAAECggEAAL2Aq4F+c3WyVnSahaxt1K+7aPhw8NRwQDVzEizLjTNJ\n8VHhbCd/M1lywPmXNphdjmctYZtb56HCxYrR3YtgSAskMozLNC4CSWRbwpBYnaKD\nVPxtkzFLQIcYkNLHDaj+v4IK4YBUgSszeIIOX9IXzskRmjp4b/SNPzb+7GBJPuD8\nq0PrMcivZI5cw8NQywS5qRdzn42PqrA28SLLeHP+ZQpxwCxW0nU+rt1pqoyJpteC\n+/qR3XUAFnUIs/KKlwgEMCpreiuJGf/3HQ77DKjS+RZIA+RDJH6tJ1tySRMUeQMh\nYRVTau7XPVeNBE9fABwUmZnxq6cv6FGwxy4C5gLkLQKBgQD32q058LZTkCkYauUl\nz+L+muEZBVm7xr7ooh4Q9d1UOcitVO0Rk0WyyzioPJAWRK8yM73mfg7qzJErq3lK\nuR7gPUy5V5rOCpfvLMaHcegYMMuLAdhzRb4bAo6Sb8fXgYmm9yknZ2D8uZ7GrDdc\ntIQMU9Kkiktuhgzib0xRUP4dxQKBgQDp92nAuhC5O/AUVRNCIB6/X2HQNZyPJMp3\n8DCpl+8sWkR5Q2Z5dWpyomWZC0acTxoWzQ7aKK0Iz6CXmFo9VH8aax3325IZWBxy\nssupOSZ4Hy+PNupm4lQaPsnDXqqtwmrTWKG3G34WHqOwXYauFe0Pj8sBNx0TN8k4\n0yIS6t+VewKBgQC+hFDzYJxFz2JHaqOJVSrfGp48ZWh8dmD44OTLlLH0tBYVZlp0\nUAgbTyrV5ve6pkElDbDDI9LDmUtdjglF7tZU98mqDjTofCwdpQVVx7DoJ1nOGDUR\nJmLi0CxXU6UBeokc1o/DwitDGEt725USpY97ClO4NrWU12XACF1ZhDBRIQKBgHQd\nKunQLe6QNZURp84gfMIDR1r60GkmHCmsFaqFUdjUL7ly3s+Wmy6rM/rhYri+dTct\nq5pPp5iA2rWBkf9wCOiGksfou7hCR1QRMgwY5eOlrofH/Er1NkIUOTPxrokvvK6J\nBTEHvuqhaCFmOSn6jb00Ys6GmLJp9D50Yiu7Tx0zAoGAXS0yui1daBy+5UQiCT6l\nLp008WBHQw3wlzdEhLwH8JTOj/+2M3x2BuhrhWGEKH3M8Y+wnVE1a6ZptGyoy3LC\nSO0Odgm2MRNSwfH+rKd/75kAuXj83vHlNRTLfA/Xb79bitNlODyoVa7IxeUl5gNH\ndHsq+NB6M55zsQg+zPc/LzE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-7z37d@flightmanagementsystem-b087d.iam.gserviceaccount.com",
+  "client_id": "114699464632664292433",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-7z37d%40flightmanagementsystem-b087d.iam.gserviceaccount.com"
+}
